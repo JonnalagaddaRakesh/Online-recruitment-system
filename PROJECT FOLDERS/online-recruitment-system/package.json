@@ -1,0 +1,32 @@
+{
+  "name": "online-recruitment-system",
+  "version": "1.0.0",
+  "description": "A complete, full-stack Online Recruitment System built with React, Node.js, Express, and MongoDB.",
+  "main": "server/server.js",
+  "type": "module",
+  "scripts": {
+    "dev": "concurrently --kill-others \"npm run server\" \"npm run client\"",
+    "server": "node server/server.js",
+    "server:dev": "node server/server.js",
+    "client": "npm --prefix client run dev",
+    "build": "npm --prefix client run build",
+    "seed": "node server/seed.js",
+    "db:view": "node server/view_database.js",
+    "test:system": "node server/test_suite.js",
+    "install:all": "npm install && npm --prefix server install && npm --prefix client install"
+  },
+  "keywords": [
+    "recruitment",
+    "job-portal",
+    "mern",
+    "fullstack",
+    "react",
+    "express",
+    "mongodb"
+  ],
+  "author": "Antigravity",
+  "license": "ISC",
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  }
+}
